@@ -1,0 +1,1 @@
+web: guniweb: gunicorn Brain_tumour_detection.wsgi
