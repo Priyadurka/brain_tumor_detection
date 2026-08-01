@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-primary">
+            Brain Tumour Detection System
+        </h1>
+
+        <p class="lead text-secondary">
+            Artificial Intelligence Powered Brain MRI Analysis using Deep Learning (CNN)
+        </p>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="card shadow-lg border-0 rounded-4 mb-5">
+        <div class="card-body p-5">
+
+            <h2 class="text-primary mb-4">
+                Project Overview
+            </h2>
+
+            <p class="fs-5 text-muted">
+                Brain Tumour Detection System is an AI-powered web application
+                developed using Django and Convolutional Neural Networks (CNN).
+                The system analyzes MRI brain scan images and predicts whether
+                the patient has a brain tumour or not. The objective is to
+                assist in early diagnosis by providing quick and accurate
+                predictions.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Features -->
+    <h2 class="text-center fw-bold mb-4">
+        Key Features
+    </h2>
+
+    <div class="row g-4 mb-5">
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 text-center p-4">
+                <div style="font-size:55px;">👤</div>
+                <h5 class="mt-3">User Authentication</h5>
+                <p class="text-muted">
+                    Secure Registration and Login.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 text-center p-4">
+                <div style="font-size:55px;">📤</div>
+                <h5 class="mt-3">MRI Upload</h5>
+                <p class="text-muted">
+                    Upload Brain MRI images securely.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 text-center p-4">
+                <div style="font-size:55px;">🧠</div>
+                <h5 class="mt-3">AI Prediction</h5>
+                <p class="text-muted">
+                    CNN model predicts tumour type.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 text-center p-4">
+                <div style="font-size:55px;">📊</div>
+                <h5 class="mt-3">Prediction History</h5>
+                <p class="text-muted">
+                    Stores previous MRI reports.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="card shadow-lg border-0 rounded-4 mb-5">
+        <div class="card-body p-5">
+
+            <h2 class="text-primary mb-4">
+                Technology Stack
+            </h2>
+
+            <div class="row text-center">
+
+                <div class="col-md-2">
+                    <h1>🐍</h1>
+                    <h6>Python</h6>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>🌐</h1>
+                    <h6>Django</h6>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>🤖</h1>
+                    <h6>TensorFlow</h6>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>🧠</h1>
+                    <h6>CNN</h6>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>💾</h1>
+                    <h6>SQLite</h6>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>🎨</h1>
+                    <h6>Bootstrap</h6>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Workflow -->
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+
+            <h2 class="text-primary mb-4 text-center">
+                System Workflow
+            </h2>
+
+            <div class="row text-center">
+
+                <div class="col-md-2">
+                    <h1>1️⃣</h1>
+                    <p>Register</p>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>2️⃣</h1>
+                    <p>Login</p>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>3️⃣</h1>
+                    <p>Upload MRI</p>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>4️⃣</h1>
+                    <p>AI Analysis</p>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>5️⃣</h1>
+                    <p>Prediction</p>
+                </div>
+
+                <div class="col-md-2">
+                    <h1>6️⃣</h1>
+                    <p>History</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

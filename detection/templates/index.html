@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Brain Tumour Detection
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="hero-title">
+                    AI Powered <span>Brain Tumour Detection</span>
+                </h1>
+
+                <p class="hero-text">
+                    Detect brain tumours quickly and accurately using our
+                    Deep Learning CNN model. Upload an MRI scan and receive
+                    instant prediction results.
+                </p>
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'upload' %}" class="btn btn-success btn-lg me-3">
+                        Start Prediction
+                    </a>
+
+                    <a href="{% url 'history' %}" class="btn btn-outline-light btn-lg">
+                        View History
+                    </a>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}" class="btn btn-success btn-lg me-3">
+                        Get Started
+                    </a>
+
+                    <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg">
+                        Learn More
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/image-brain.png' %}"
+                     class="img-fluid hero-image"
+                     alt="Brain">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Trusted AI Healthcare Solution</h2>
+            <p class="section-subtitle">
+                Our intelligent system provides fast, secure and reliable brain
+                MRI analysis powered by Deep Learning technology.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>98%</h2>
+
+                    <h6>Prediction Accuracy</h6>
+
+                    <p>
+                        High accuracy CNN model for tumour detection.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>4</h2>
+
+                    <h6>Tumour Categories</h6>
+
+                    <p>
+                        Detects four different brain tumour classes.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>5s</h2>
+
+                    <h6>Fast Prediction</h6>
+
+                    <p>
+                        AI generates prediction results within seconds.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>100%</h2>
+
+                    <h6>Secure Storage</h6>
+
+                    <p>
+                        Every MRI scan is safely stored in your account.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold">
+            Ready to Predict?
+        </h2>
+
+        <p class="mt-3">
+            Upload your MRI scan and get AI-powered prediction instantly.
+        </p>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'upload' %}" class="btn btn-light btn-lg">
+                Upload MRI
+            </a>
+        {% else %}
+            <a href="{% url 'register' %}" class="btn btn-light btn-lg">
+                Create Account
+            </a>
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

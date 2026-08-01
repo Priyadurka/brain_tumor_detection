@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Upload MRI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center mb-4">
+            🧠 Brain Tumor Detection
+        </h2>
+
+
+        <form method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <label class="form-label">
+                Upload MRI Image
+            </label>
+
+
+            <input type="file"
+                   name="image"
+                   class="form-control"
+                   onchange="previewImage(event)"
+                   required>
+
+
+            <div class="text-center mt-4">
+
+                <img id="preview"
+                     src="#"
+                     class="img-fluid rounded"
+                     style="width:300px; display:none;">
+
+            </div>
+
+
+            <button type="submit"
+                    class="btn btn-primary w-100 mt-4">
+                Predict Tumor
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function previewImage(event){
+
+    let image = document.getElementById('preview');
+
+    image.src = URL.createObjectURL(event.target.files[0]);
+
+    image.style.display = "block";
+
+}
+
+</script>
+
+
+{% endblock %}

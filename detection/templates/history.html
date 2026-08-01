@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+MRI History
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-5">
+
+
+<h2 class="text-center">
+My MRI Scans
+</h2>
+
+
+<div class="row mt-4">
+
+
+{% for img in images %}
+
+
+<div class="col-md-4">
+
+<div class="card">
+
+
+<img src="{{ img.image.url }}"
+class="card-img-top"
+height="250">
+
+
+<div class="card-body">
+
+<p>
+Uploaded:
+{{ img.created_at }}
+</p>
+
+<p class="mt-2">
+    <strong>Prediction:</strong>
+    {{ img.prediction }}
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+{% empty %}
+
+<h4>
+No MRI images uploaded yet.
+</h4>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</div>
+
+
+{% endblock %}
